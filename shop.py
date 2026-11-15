@@ -14,3 +14,6 @@ def apply_discount(price , percen):
 
 def add_tax(price , rate=0.2):
     return price * (1 + rate)
+
+def apply_coupon(price):
+    return price - 5
