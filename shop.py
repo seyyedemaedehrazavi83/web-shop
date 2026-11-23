@@ -11,6 +11,7 @@ def find_by_name(products, text):
 
 
 def apply_discount(price , percen):
+    percen = min(percen , 100)
     return price * (100 - percen) / 100
 
 
@@ -23,6 +24,7 @@ def apply_coupon(price):
 
 def test_find_case_insensitive():
     assert [p.sku for p in find_by_name(products , "KEY")] == ["B2"]
+
 def format_price(price):
 return f"{price:,} Toman"
 
