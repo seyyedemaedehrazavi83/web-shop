@@ -19,7 +19,7 @@ def add_tax(price , rate=0.15):
     return price * (1 + rate)
 
 def apply_coupon(price):
-    return price - 5
+    return max(price - 5, 0)
 
 def test_find_case_insensitive():
     assert [p.sku for p in find_by_name(products , "KEY")] == ["B2"]
