@@ -11,7 +11,7 @@ def find_by_name(products, text):
 
 
 def apply_discount(price , percen):
-    percen = min(percen , 100)
+    percen = max(min(percen , 100),0)
     return price * (100 - percen) / 100
 
 
