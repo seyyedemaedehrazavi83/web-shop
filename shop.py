@@ -36,3 +36,6 @@ return [p.name for p in products]
 def in_stock(stock , sku):
       return stock.get(sku , 0) > 0
 
+def count_products(products):
+    return len(products)
+
